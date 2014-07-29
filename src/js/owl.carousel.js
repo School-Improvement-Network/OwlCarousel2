@@ -1764,6 +1764,8 @@
 
 		// Remove event handlers in the ".owl.carousel" namespace
 		this.dom.$el.off('.owl');
+		// Clear watchVisibility interval
+		window.clearInterval(this.e._checkVisibile);
 
 		if (this.dom.$cItems !== null) {
 			this.dom.$cItems.remove();
