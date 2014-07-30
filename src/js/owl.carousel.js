@@ -1753,6 +1753,10 @@
 			if (this.settings.mouseDrag) {
 				this.off(document, this.dragType[3], this.e._onDragStart);
 			}
+			if (this.settings.touchDrag) {
+				this.off(document, this.dragType[1], this.e._onDragMove);
+				this.off(document, this.dragType[2], this.e._onDragEnd);
+			}
 			if (this.settings.mouseDrag) {
 				this.dom.$stage.off('dragstart', function() {
 					return false;
