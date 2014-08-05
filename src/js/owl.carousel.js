@@ -945,7 +945,7 @@
 	Owl.prototype.maximum = function(relative) {
 		var settings = this.settings,
 			maximum = this._coordinates.length,
-			boundary = Math.abs(this._coordinates[maximum - 1]) - this._width,
+			boundary = Math.abs(this._coordinates[maximum - 1]) - (this._width - Math.abs(this._coordinates[0])),
 			i = -1, j;
 
 		if (settings.loop) {
